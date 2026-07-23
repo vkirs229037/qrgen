@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Главная страница | Генератор QR-кодов{% endblock %}
+
+{% block content %}
+<h1>Создавайте QR-коды быстро и бесплатно</h1>
+<p>На этом сайте вы сможете создать QR-код для любого сайта или текста. Введите ваш текст, нажмите на кнопку "Создать" и делитесь QR-кодом. Все QR-коды хранятся на сервере 24 часа.</p>
+<form action="/create" method="POST">
+    <label for="content">Ваш текст:</label>
+    <textarea id="content" rows="1" cols="60" maxlength="4296"></textarea>
+    <button type="submit">Создать</button>
+</form>
+{% endblock %}
