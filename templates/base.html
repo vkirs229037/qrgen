@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link type="text/css" rel="stylesheet" href="/static/css/style.css"/>
+    <link rel="shortcut icon" href="/static/ico/favicon.png"/>
+</head>
+<body>
+    <div>
+        <header>
+            <p id="title">Генератор QR-кодов</p>
+            <div class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Главная</a></li>
+                    <li><a href="{{ url_for('about') }}">О сайте</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+            <a href="https://www.flaticon.com/free-icons/qr-code" title="qr code icons">Qr code icons created by HideMaru - Flaticon</a>
+        </footer>
+    </div>
+</body>
