@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}Ошибка | Генератор QR-кодов{% endblock %}
+{% block content %}
+<h1>Ошибка {{ code }}</h1>
+<p>{{ error }}</p>
+<a href="{{ url_for('home') }}">Вернуться на главную</a>
+{% endblock %}
