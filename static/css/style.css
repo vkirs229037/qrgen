@@ -1,0 +1,85 @@
+/* База */
+
+body {
+    background-color: #e4dfda;
+    color: #c1666b;
+    width: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+/* Все, что не контент - строка навигации, футер и тд */
+
+header {
+    border-bottom: 2px solid #c1666b;
+    width: 100%;
+}
+
+#title {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.navbar {
+    border-top: 2px solid #c1666b;
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+footer {
+    border-top: 2px solid #c1666b;
+    width: 100%;
+}
+
+/* Ссылки */
+
+a {
+    color: #731dd8;
+}
+
+a:visited {
+    color: #48a9a6;
+}
+
+a:hover {
+    color: #4b128d;
+}
+
+/* Основной контент */
+
+h1 {
+    font-size: 1.5rem;
+}
+
+main {
+    width: 60%;
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form button {
+    width: 20%;
+    height: 50px;
+}
