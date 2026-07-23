@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, send_from_directory
 import qrcode
 import os
 
@@ -46,6 +46,18 @@ def create():
         img.save(DATA_PATH + f"/{latest_idx}.png")
         update_latest(latest_idx)
         return redirect(f"/view/{latest_idx}")
+
+@app.route("/view/<id>")
+def view(id):
+    fpath = DATA_PATH + f"/{id}.png"
+    if not os.path.isfile(fpath):
+        # TODO тут ошибка
+        return redirect("/")
+    return render_template("view.html", fpath=f"{id}.png", id=id)
+
+@app.route("/data/<path:filename>")
+def get_file(filename):
+    return send_from_directory(DATA_PATH, filename, as_attachment=True)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
