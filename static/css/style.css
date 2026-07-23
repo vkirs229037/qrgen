@@ -74,6 +74,14 @@ img {
     border: 4px solid #731dd8;
 }
 
+.alert {
+    border: 2px solid rgb(93, 24, 24);
+    background-color: rgb(195, 84, 84);
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
 /* Форма */
 
 form {
